@@ -1,0 +1,2 @@
+function a(n){const e=JSON.stringify(n);return btoa(unescape(encodeURIComponent(e))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}function c(n){try{const e=n.replace(/-/g,"+").replace(/_/g,"/"),t=e+"=".repeat((4-e.length%4)%4),o=decodeURIComponent(escape(atob(t)));return JSON.parse(o)}catch{return null}}function r(n,e){const t=a(e);return`${window.location.origin}${n}?d=${t}`}export{r as b,c as d};
+//# sourceMappingURL=encode-DVOQ7ziD.js.map

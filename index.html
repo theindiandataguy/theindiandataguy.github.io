@@ -32,11 +32,29 @@
     
     <link rel="manifest" href="favicons/site.webmanifest" media="(prefers-color-scheme: light)">
     <link rel="manifest" href="favicons/site-light.webmanifest" media="(prefers-color-scheme: dark)">
-    <script type="module" crossorigin src="/assets/index-ClGJZwbe.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/react-vendor-Djiz1au6.js">
-    <link rel="modulepreload" crossorigin href="/assets/motion-vendor-CYwxEcwk.js">
-    <link rel="modulepreload" crossorigin href="/assets/radix-toast-vendor-CGVxZlN5.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-C9Cl-UdW.css">
+
+    <script type="text/javascript">
+      // Undoes the path encoding public/404.html applies, restoring the real
+      // URL (e.g. a deep link or a shared tool result) before React Router
+      // mounts. See public/404.html for why this exists.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+    <script type="module" crossorigin src="/assets/index-cHAbZTUI.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-CoNaTF_x.js">
+    <link rel="modulepreload" crossorigin href="/assets/motion-vendor-uW83WbrU.js">
+    <link rel="modulepreload" crossorigin href="/assets/radix-toast-vendor-DsC6O1f5.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-CPqepFoT.css">
   </head>
 
   <body>
